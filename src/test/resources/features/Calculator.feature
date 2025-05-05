@@ -46,6 +46,7 @@ Feature: Calculator
     Then an exception with massage "На ноль делить нельзя" should be thrown
 
   Scenario Outline: Parametrized. Add two numbers <num1> & <num2>
+    Тест на проверку таблиц
     Given I opened a calculator
     When I add <num1> and <num2>
     Then the result should be <total>
