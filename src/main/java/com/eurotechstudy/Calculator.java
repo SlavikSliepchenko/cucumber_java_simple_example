@@ -18,7 +18,7 @@ public class Calculator {
     }
 
     // Метод для деления одного числа на другое
-    // Возвращает Double.NaN, если num2 равен 0
+    // Возвращает String("На ноль делить нельзя"), если num2 равен 0
     public double divide(double num1, double num2) {
         if (num2 == 0) {
             System.out.println("На ноль делить нельзя");
