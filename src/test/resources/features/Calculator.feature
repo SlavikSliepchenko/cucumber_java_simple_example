@@ -44,3 +44,15 @@ Feature: Calculator
     Given I opened a calculator
     When I divide 8 by 0
     Then an exception with massage "На ноль делить нельзя" should be thrown
+
+  Scenario Outline: Parametrized. Add two numbers <num1> & <num2>
+    Given I opened a calculator
+    When I add <num1> and <num2>
+    Then the result should be <total>
+
+    Examples:
+    | num1 | num2 | total |
+    |  -2   |   3  |   1   |
+    |  99   | -99  |   0   |
+    |  -1   | -10  | -11   |
+
