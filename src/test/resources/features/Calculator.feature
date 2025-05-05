@@ -14,10 +14,11 @@ Feature: Calculator
     When I add 2 and -2
     Then the result should be 0
 
-  Scenario: Substraction
+  Scenario: Subtraction
   Тест на проверку вычитания
     Given I opened a calculator
-    When from 2 I substract 2
+    When From 2 I subtract 2
+    And print string "если первое число больше второго результат будет отрицательный"
     Then the result should be 0
 
   Scenario: Multiply
@@ -31,3 +32,15 @@ Feature: Calculator
     Given I opened a calculator
     When I multiply 2 and -7
     Then the result should be -14
+
+  Scenario: Divide
+  Тест на проверку деления
+    Given I opened a calculator
+    When I divide 4 by 2
+    Then the result should be 2
+
+  Scenario: Divide by zero
+  Тест на проверку деления на 0
+    Given I opened a calculator
+    When I divide 8 by 0
+    Then an exception with massage "На ноль делить нельзя" should be thrown

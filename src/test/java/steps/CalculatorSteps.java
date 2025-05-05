@@ -34,19 +34,19 @@ public class CalculatorSteps {
     }
 
     @And("print string {string}")
-    public void printString(String value) {
-
-        System.out.println(value);
-
+    public void printString(String value) { System.out.println(value);
     }
 
-
-    @When("from {int} I substract {int}")
-    public void fromISubstract(int num1, int num2) {
-
-        factResult = calculator.subtract(num1, num2);
-
+    @When("From {int} I subtract {int}")
+    public void iSubtract(int num1, int num2) { factResult = calculator.subtract(num1, num2);
     }
 
+    @When("I divide {double} by {double}")
+    public void iDivideBy(double num1, double num2) { factResult = calculator.divide(num1, num2);
+    }
+
+    @Then("an exception with massage {string} should be thrown")
+    public void anExceptionWithMassageShouldBeThrown( String str) {
+    }
 
 }

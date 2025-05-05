@@ -21,7 +21,7 @@ public class Calculator {
     // Возвращает Double.NaN, если num2 равен 0
     public double divide(double num1, double num2) {
         if (num2 == 0) {
-            return Double.NaN;
+            System.out.println("На ноль делить нельзя");
         }
         return num1 / num2;
     }
